@@ -1,7 +1,7 @@
 ### Hi there 👋
 
 <a href="https://app.daily.dev/manghi.dev">
-  <img src="https://api.daily.dev/devcards/997b2296c4fd47dab1e988d6c1a4c3c0.png?r=6id" width="250" alt="Ricardo Rodriguez's Dev Card"/>
+  <img src="https://github.com/manghidev/manghidev/blob/master/devcard.svg" width="250" alt="Ricardo Rodriguez's Dev Card"/>
 </a>
 
 <!--
