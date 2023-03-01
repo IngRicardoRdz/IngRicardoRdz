@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-<a href="https://app.daily.dev/manghi.dev">
+<a href="https://app.daily.dev/manghidev">
   <img src="https://github.com/manghidev/manghidev/blob/master/devcard.svg" width="250" alt="Ricardo Rodriguez's Dev Card"/>
 </a>
 
