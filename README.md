@@ -1,13 +1,13 @@
 <div align="center" style="font-size: 40px; font-weight: bold;">
   <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/d48893bd-0757-481c-8d7e-ba3e163feae7"/>
 
-  # Hi, I'm <a href="https://manghi.dev">manghidev</a> 🇲🇽
+  Hi, I'm [manghidev](https://manghi.dev) 🇲🇽
 
 </div>
 
 <div style="font-size: 20px; text-align: justify;">
 
-  ### I'm an TIC engineer 👨🏽‍💻 with just over 5 years of experience in software development 🖥️. I'm passionate about technology, video games 🎮, and mangoes 🥭.
+  I'm an TIC engineer 👨🏽‍💻 with just over 5 years of experience in software development 🖥️. I'm passionate about technology, video games 🎮, and mangoes 🥭.
 
 </div>
 
