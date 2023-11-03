@@ -1,15 +1,12 @@
-<div align="center" style="font-size: 40px; font-weight: bold;">
-  <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/d48893bd-0757-481c-8d7e-ba3e163feae7"/>
+<img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/d48893bd-0757-481c-8d7e-ba3e163feae7"/>
 
-  Hi, I'm [manghidev](https://manghi.dev) 🇲🇽
+<h1 align="center">
+  Hi, I'm <a href="https://manghi.dev" target="_blank" rel="noreferrer">manghidev</a> 🇲🇽
+</h1>
 
-</div>
-
-<div style="font-size: 20px; text-align: justify;">
-
+<h4 style="text-align: justify;">
   I'm an TIC engineer 👨🏽‍💻 with just over 5 years of experience in software development 🖥️. I'm passionate about technology, video games 🎮, and mangoes 🥭.
-
-</div>
+</h4> 
 
 <div align="center">
 
@@ -21,7 +18,9 @@
 
 </div>
 
-## 🛠️ Languages and Tools
+<h3>
+  🛠️ Languages and Tools
+</h3>
 
 <div align="center">
   <a href="https://skillicons.dev">
