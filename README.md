@@ -4,7 +4,7 @@
   Hi, I'm <a href="https://manghi.dev" target="_blank" rel="noreferrer">manghidev</a> 🇲🇽
 </h1>
 
-<h4 style="text-align: justify;">
+<h4 align="center">
   I'm an TIC engineer 👨🏽‍💻 with just over 5 years of experience in software development 🖥️. I'm passionate about technology, video games 🎮, and mangoes 🥭.
 </h4> 
 
