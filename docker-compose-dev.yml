@@ -12,7 +12,7 @@ services:
       #* Directory where you will work
       working_dir: /home/dev
       #* Container name
-      container_name: kananpass-front
+      container_name: manghi.dev
       command: sh -c "npm i && npm run dev"
       #* Port exhibition
       ports:
