@@ -1,7 +1,7 @@
 {
   "name": "manghidev",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "dev": "astro dev  --host 0.0.0.0",
     "build": "astro check && astro build",
