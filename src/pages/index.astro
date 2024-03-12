@@ -1,12 +1,29 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Cards from "../layouts/Cards.astro";
+import Card1 from "../components/Card1.astro";
+import Card2 from "../components/Card2.astro";
+import Card3 from "../components/Card3.astro";
+import Card4 from "../components/Card4.astro";
+import Card5 from "../components/Card5.astro";
+import Card6 from "../components/Card6.astro";
+import Card7 from "../components/Card7.astro";
+import Card8 from "../components/Card8.astro";
+import Card9 from "../components/Card9.astro";
 ---
 
-<Layout title="manghi.dev">
-	<main class="text-back dark:text-white">
-		<h1 class="text-6xl font-bold text-center mb-24">
-			Welcome to my <span class="bg-clip-text bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-transparent">Astro</span> portfolio
-		</h1>
+<Layout title="My WebSite">
+	<main class="h-screen center lg:mx-52">
+		<Cards>
+			<Card1></Card1>
+			<Card2></Card2>
+			<Card3></Card3>
+			<Card4></Card4>
+			<Card5></Card5>
+			<Card6></Card6>
+			<Card7></Card7>
+			<Card8></Card8>
+			<Card9></Card9>
+		</Cards>
 	</main>
 </Layout>
