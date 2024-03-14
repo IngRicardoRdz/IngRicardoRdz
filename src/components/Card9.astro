@@ -1,8 +1,10 @@
-<div class="card col-span-1 text-center text-xs">
-    © <span class="myTextGradient" id="year"></span> · Elaborado con el ❤️ utilizando Astro por <span class="mtTextGradientReverse">manghidev</span>.
-</div>
+---
+const year = new Date().getFullYear();
+---
 
-<script>
-    const yearElement = document.getElementById('year');
-    if (yearElement) yearElement.textContent = String(new Date().getFullYear());
-</script>
+<div class="card col-span-12 lg:col-span-1 center text-center text-xs">
+    <div>
+        © <span class="myTextGradient">{year}</span> · Elaborado con el ❤️ utilizando
+        Astro por <span class="mtTextGradientReverse">manghidev</span>.
+    </div>
+</div>
