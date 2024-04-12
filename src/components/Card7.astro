@@ -1,3 +1,42 @@
-<div class="card col-span-12 md:col-span-4 lg:col-span-1 md:row-span-2 center">
-    7
+<div class="card col-span-12 md:col-span-4 lg:col-span-1 lg:row-span-1 center hover:cursor-pointer hover:text-[#EF9B25C5]" id="easterEgg">
+    <span id="randomMessage"></span>
 </div>
+
+<script>
+	import confetti from 'canvas-confetti'; 
+
+    const messages = [
+        'You are awesome!',
+        'You are amazing!',
+        'You are incredible!',
+        'You are fantastic!',
+        'You are wonderful!',
+        'You are great!',
+        'You are the best!',
+        '🥚',
+        'You are the greatest!',
+        'The best developer!',
+        'The best designer!',
+        'The best person',
+        "Congratulations!",
+        "You found the Easter Egg!",
+        "Keep up the good work!",
+        "Amazing job!",
+        "Well done!"
+    ];
+
+    document.getElementById('randomMessage')!.innerHTML = '👾';
+
+    let randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
+    document.getElementById('easterEgg')!.addEventListener('click', () => {
+        confetti();
+
+        if (randomMessage === "Well done!") {
+            return document.getElementById('randomMessage')!.innerHTML = '🐣';
+        } else {
+            randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('randomMessage')!.innerHTML = randomMessage;
+        }
+    });
+</script>
