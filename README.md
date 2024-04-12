@@ -23,15 +23,6 @@
 
 <div align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=git,github,vscode,,js,ts,html,css,php,java,cs,dart,,tailwind,bootstrap,,flutter,nodejs,angular,vue,express,astro,laravel,jquery,,mysql,sqlite,mongodb,dynamodb,docker,linux,raspberrypi,,firebase,aws"/>
+    <img src="https://skillicons.dev/icons?i=git,github,vscode,tailwind,bootstrap,flutter,nodejs,angular,docker,linux,raspberrypi,firebase,aws"/>
   </a>
-</div>
-
-<br>
-
-<div align="center">
-
-  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?theme=radical&username=manghidev&repo=Flutter-Capacitation)](https://github.com/manghidev/github-readme-stats)
-  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?theme=radical&username=manghidev&repo=lazyvim)](https://github.com/manghidev/github-readme-stats)
-
 </div>
