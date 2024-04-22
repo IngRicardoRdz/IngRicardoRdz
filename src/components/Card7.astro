@@ -1,4 +1,4 @@
-<div class="card col-span-12 md:col-span-4 lg:col-span-1 lg:row-span-1 center hover:cursor-pointer hover:text-[#EF9B25C5]" id="easterEgg">
+<div class="card text-center col-span-12 md:col-span-4 lg:col-span-1 lg:row-span-1 center hover:cursor-pointer hover:text-[#EF9B25C5]" id="easterEgg">
     <span id="randomMessage"></span>
 </div>
 
@@ -6,37 +6,48 @@
 	import confetti from 'canvas-confetti'; 
 
     const messages = [
-        'You are awesome!',
-        'You are amazing!',
-        'You are incredible!',
-        'You are fantastic!',
-        'You are wonderful!',
-        'You are great!',
-        'You are the best!',
-        '🥚',
-        'You are the greatest!',
-        'The best developer!',
-        'The best designer!',
-        'The best person',
-        "Congratulations!",
-        "You found the Easter Egg!",
-        "Keep up the good work!",
-        "Amazing job!",
-        "Well done!"
+        '¡Usted es maravilloso!',
+        '¡Eres fabuloso!',
+        '¡Eres increíble!',
+        '¡Usted es fantástica!',
+        '¡Eres maravilloso!',
+        '¡Eres genial!',
+        '¡Eres el mejor!',
+        '🌳',
+        '¡Eres la mejor!',
+        '¡El mejor desarrollador!',
+        '¡El mejor diseñador!',
+        'La mejor persona',
+        '¡Felicidades!',
+        '¡Encontraste el huevo de Pascua!',
+        '¡Sigan con el buen trabajo!',
+        '¡Excelente trabajo!',
+        '¡Bien hecho!',
+        '🌴'
     ];
 
     document.getElementById('randomMessage')!.innerHTML = '👾';
 
     let randomMessage = messages[Math.floor(Math.random() * messages.length)];
 
-    document.getElementById('easterEgg')!.addEventListener('click', () => {
-        confetti();
+    const button = document.getElementById('easterEgg')!;
 
-        if (randomMessage === "Well done!") {
-            return document.getElementById('randomMessage')!.innerHTML = '🐣';
-        } else {
-            randomMessage = messages[Math.floor(Math.random() * messages.length)];
-            document.getElementById('randomMessage')!.innerHTML = randomMessage;
+    button.addEventListener('click', () => {
+        if (randomMessage === "¡Bien hecho!") {
+            return document.getElementById('randomMessage')!.innerHTML = '🥭';
         }
+
+        const rect = button.getBoundingClientRect();
+
+        const x = (rect.left + rect.width / 2) / window.innerWidth;
+        const y = (rect.top + rect.height / 2) / window.innerHeight;
+
+        confetti({
+            spread: 150,
+            origin: { x, y },
+        });
+        
+        randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        document.getElementById('randomMessage')!.innerHTML = randomMessage;
     });
 </script>
