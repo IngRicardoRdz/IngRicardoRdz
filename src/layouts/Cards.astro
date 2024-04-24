@@ -1,8 +1,12 @@
-<div class="grid grid-cols-12 lg:grid-cols-[repeat(4,minmax(0,300px))] gap-4 lg:grid-rows-[repeat(8,minmax(0,60px))] p-5 lg:p-0">
+<div class="select-none grid grid-cols-12 lg:grid-cols-[repeat(4,minmax(0,300px))] gap-4 lg:grid-rows-[repeat(8,minmax(0,60px))] p-5 lg:p-0">
     <slot/>
 </div>
 
 <script>
+    Array.from(document.getElementsByTagName('img')).forEach((img) => {
+        img.ondragstart = () => false;
+    });
+
     const snowPage = () => {
         var embedimSnow = document.getElementById("embedim--snow");
         if (!embedimSnow) {
@@ -33,4 +37,7 @@
             document.body.appendChild(embedimSnow);
         }
     }
+
+    const month = new Date().getMonth();
+    if (month === 11 || month === 0 || month === 1) snowPage();
 </script>
