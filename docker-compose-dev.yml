@@ -7,7 +7,7 @@ services:
   #* Service name
     frontend:
       #* Image to use
-      image: node:20.12.2-alpine
+      image: node:20.14.2-alpine
       init: true
       #* Directory where you will work
       working_dir: /home/dev
