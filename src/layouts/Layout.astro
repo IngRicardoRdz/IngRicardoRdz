@@ -1,167 +1,40 @@
 ---
+import Favicon from "../utilities/favicon.astro";
+import MetaTags from "../utilities/metaTags.astro";
+import Scripts from "../utilities/globalScripts.astro";
+import Styles from "../utilities/globalStyles.astro";
+
 interface Props {
 	title: string;
+	language: string;
+	htmlClasses: string;
+	metaTags?: boolean;
 }
 
-const { title } = Astro.props;
+const {
+	title,
+	language,
+	htmlClasses,
+	metaTags = true,
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es" class="text-back dark:text-white bg-white dark:bg-[#13151a]">
+<html lang={ language } class={ htmlClasses }>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
+		<meta charset="UTF-8"/>
 
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
+		{ metaTags && <MetaTags/> }
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Graduate&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		<Favicon/>
 
-		<title>{title}</title>
-		
-		<style is:global>
-			@tailwind base;
-			@tailwind components;
-			@tailwind utilities;
+		<title>{ title }</title>
 
-			:root {
-				font-family: "JetBrains Mono", monospace;
-				font-weight: 400;
-				font-style: normal;
-			}
-		
-			@layer components {
-				.myTextGradient {
-					@apply bg-clip-text bg-gradient-to-r from-[#EF9A25] from-35% via-[#E75D24] via-65% to-[#A92723] to-100% text-transparent;
-				}
-
-				.mtTextGradientReverse {
-					@apply bg-clip-text bg-gradient-to-r from-[#A92723] from-35% via-[#E75D24] via-65% to-[#EF9A25] to-100% text-transparent;
-				}
-
-				.card {
-					@apply border-2 border-gray-700 p-5 hover:border-[#EF9A25] rounded-xl;
-				}
-
-				.center {
-					@apply flex justify-center items-center;
-				}
-
-				.socialButton {
-					@apply text-xl active:translate-x-[3px] active:translate-y-[3px] text-black dark:text-white px-5 py-2 border border-[#EF9A25] bg-white dark:bg-[#13151a] cursor-pointer rounded-xl hover:border-gray-600;
-				}
-			}
-		</style>
+		<Styles/>
 	</head>
 	<body>
 		<slot/>
 	</body>
 
-	<!-- LazySizes -->
-	<script is:inline src="/lazysizes.min.js" async></script>
-
-	<!-- Snow -->
-	<script>
-		Array.from(document.getElementsByTagName('img')).forEach((img) => {
-			img.ondragstart = () => false;
-		});
-	
-		const month = new Date().getMonth();
-	
-		const snowPage = () => {
-			var embedimSnow = document.getElementById('embedim--snow');
-			
-			if (!embedimSnow) {
-				function embRand(a: number, b: number) {
-					return Math.floor(Math.random() * (b - a + 1)) + a;
-				};
-	
-				let embCSS = `
-					.embedim-snow {
-						position: absolute;
-						width: 10px;
-						height: 10px;
-						background: white;
-						border-radius: 50%;
-						margin-top: -10px
-					}
-				`;
-	
-				let embHTML = '';
-	
-				let particleNumber = 0;
-	
-				switch (month) {
-					case 10:
-						particleNumber = 100;
-						break;
-					case 11:
-						particleNumber = 250;
-						break;
-					case 0:
-						particleNumber = 50;
-						break;
-				}
-	
-				for (let i = 1; i < particleNumber; i++) {
-					embHTML += '<i class="embedim-snow"></i>';
-	
-					let rndX = parseFloat((embRand(0, 1000000) * 0.0001).toFixed(2));
-					let rndO = parseFloat((embRand(-100000, 100000) * 0.0001).toFixed(2));
-					let rndT = parseFloat((embRand(3, 8) * 10).toFixed(2));
-					let rndS = parseFloat((embRand(0, 10000) * 0.0001).toFixed(2));
-	
-					embCSS += `
-						.embedim-snow:nth-child(${i}) {
-							opacity: ${(embRand(1, 10000) * 0.0001).toFixed(2)};
-							transform: translate(${rndX}vw, -10px) scale(${rndS});
-							animation: fall-${i} ${embRand(10, 30)}s -${embRand(0, 30)}s linear infinite;
-						}
-	
-						@keyframes fall-${i} {
-							${rndT}% {
-								transform:translate(${(rndX + rndO)}vw, ${rndT}vh) scale(${rndS});
-							}
-							to {
-								transform:translate(${(rndX + (rndO / 2))}vw, 105vh) scale(${rndS});
-							}
-						}
-					`;
-				}
-	
-				embedimSnow = document.createElement('div');
-	
-				embedimSnow.id = 'embedim--snow';
-				embedimSnow.innerHTML = `
-					<style>
-						#embedim--snow {
-							position: fixed;
-							left: 0;
-							top: 0;
-							bottom: 0;
-							width: 100vw;
-							height: 100vh;
-							overflow: hidden;
-							z-index: 9999999;
-							pointer-events: none;
-						}
-						
-						${embCSS}
-					</style>
-	
-					${embHTML}
-				`;
-	
-				document.body.appendChild(embedimSnow);
-			}
-		}
-	
-		if (month === 10 || month === 11 || month === 0) snowPage();
-	</script>
+	<Scripts/>
 </html>

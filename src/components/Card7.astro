@@ -9,6 +9,7 @@
         '¡Usted es maravilloso!',
         '¡Eres fabuloso!',
         '¡Eres increíble!',
+        '🌲',
         '¡Usted es fantástica!',
         '¡Eres maravilloso!',
         '¡Eres genial!',
@@ -17,13 +18,14 @@
         '¡Eres la mejor!',
         '¡El mejor desarrollador!',
         '¡El mejor diseñador!',
+        '¡Bien hecho!',
         'La mejor persona',
         '¡Felicidades!',
+        '🌱',
         '¡Encontraste el huevo de Pascua!',
         '¡Sigan con el buen trabajo!',
         '¡Excelente trabajo!',
-        '¡Bien hecho!',
-        '🌴'
+        '🌴',
     ];
 
     document.getElementById('randomMessage')!.innerHTML = '👾';
@@ -39,12 +41,25 @@
 
         const rect = button.getBoundingClientRect();
 
-        const x = (rect.left + rect.width / 2) / window.innerWidth;
-        const y = (rect.top + rect.height / 2) / window.innerHeight;
-
         confetti({
             spread: 150,
-            origin: { x, y },
+            origin: {
+                x: (rect.left + rect.width / 2) / window.innerWidth,
+                y: (rect.top + rect.height / 2) / window.innerHeight
+            },
+            particleCount: 100,
+            colors: [
+                '#FFD700',
+                '#FFA500',
+                '#FF8C00',
+                '#FF7F50',
+                '#FF6347',
+                '#FF4500',
+                '#FF0000',
+                '#DC143C',
+                '#B22222',
+                '#8B0000',
+            ],
         });
         
         randomMessage = messages[Math.floor(Math.random() * messages.length)];

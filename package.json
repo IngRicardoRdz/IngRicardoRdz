@@ -1,11 +1,11 @@
 {
   "name": "manghidev",
   "type": "module",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "scripts": {
-    "dev": "astro dev  --host 0.0.0.0",
+    "dev": "astro dev --host 0.0.0.0",
     "build": "astro check && astro build",
-    "preview": "astro preview  --host 0.0.0.0"
+    "preview": "astro preview --host 0.0.0.0"
   },
   "devDependencies": {
     "@types/canvas-confetti": "1.6.4"
@@ -13,9 +13,9 @@
   "dependencies": {
     "@astrojs/check": "0.7.0",
     "@astrojs/tailwind": "5.1.0",
-    "astro": "4.10.1",
+    "astro": "4.11.0",
     "canvas-confetti": "1.9.3",
     "tailwindcss": "3.4.4",
-    "typescript": "5.4.5"
+    "typescript": "5.5.2"
   }
 }
