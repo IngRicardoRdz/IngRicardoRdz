@@ -1,11 +1,52 @@
-<div class="card col-span-12 md:col-span-4 lg:col-span-1 md:row-span-2 center hover:cursor-pointer hover:text-[#EF9B25C5]" id="certifications">
-    <h1>
-        Mis certificaciones
-    </h1>
+<div class="card col-span-12 md:col-span-4 lg:col-span-1 md:row-span-2 h-44 lg:h-full center hover:cursor-alias hover:text-[#EF9B25C5]" id="projects">
+
+    <img src="/proyecta.png" class="carousel max-w-44 md:max-w-full" alt="UTCH Proyecta logo"/>
+    <img src="/kinnil.png" class="carousel max-w-44 md:max-w-full hidden" alt="Kinnil logo"/>
+    <img src="/jade.png" class="carousel max-w-44 md:max-w-full hidden" alt="JADE Smart Cargo Logistics logo"/>
+    <img src="/ox.png" class="carousel max-w-44 md:max-w-full hidden" alt="OX Logistics logo"/>
+    <img src="/ignite.png" class="carousel max-w-44 md:max-w-full hidden" alt="Ignite logo"/>
+    <img src="/ezsort.png" class="carousel max-w-44 md:max-w-full hidden" alt="EZSort logo"/>
+    <img src="/inbayt.png" class="carousel max-w-44 md:max-w-full hidden" alt="InBayt logo"/>
+    
 </div>
 
 <script>
-    document.getElementById('certifications')!.addEventListener('click', () => {
-        window.open('https://www.linkedin.com/in/rial-rova/details/certifications/', '_blank');
-    });
+    const imgs = document.querySelectorAll('.carousel');
+    let imgPosition = 0;
+    const seconds = 2500;
+
+    const links = [
+        'https://proyecta.utch.edu.mx/',
+        'https://kinnil.com/',
+        'https://jadesmartcargo.com/',
+        'https://www.oxlogistic.com/',
+        'https://pidelectronics.com/ignite/',
+        'https:///app.ezsort.tech/',
+        'https://app.inbayt.com/',
+    ];
+
+    let interval = setInterval(nextImg, seconds);
+
+    function updatePosition() {
+        for (let img of imgs) {
+            img.classList.remove('block');
+            img.classList.add('hidden');
+        }
+
+        imgs[imgPosition].classList.remove('hidden');
+        imgs[imgPosition].classList.add('block');
+    }
+
+    function nextImg() {
+        if (imgPosition === imgs.length - 1) imgPosition = 0;
+        else imgPosition++;
+
+        updatePosition();
+    }
+
+    document.getElementById('projects')!.addEventListener('click', () => window.open(links[imgPosition], '_blank'));
+
+    document.getElementById('projects')!.addEventListener('mouseover', () => clearInterval(interval));
+
+    document.getElementById('projects')!.addEventListener('mouseout', () => interval = setInterval(nextImg, seconds));
 </script>
