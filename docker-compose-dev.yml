@@ -1,13 +1,10 @@
-#* Docker Compose version
-version: '3.9'
-
 #* All services to be used will be declared
 services:
 
   #* Service name
     frontend:
       #* Image to use
-      image: node:20.12.2-alpine
+      image: node:20.15.0-alpine
       init: true
       #* Directory where you will work
       working_dir: /home/dev
