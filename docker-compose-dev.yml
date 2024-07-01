@@ -9,7 +9,7 @@ services:
       #* Directory where you will work
       working_dir: /home/dev
       #* Container name
-      container_name: manghi.dev
+      container_name: website
       command: sh -c "npm i && npm run dev"
       #* Port exhibition
       ports:
@@ -17,4 +17,5 @@ services:
       #* Volume where information persists
       volumes:
         - .:/home/dev
+      #* Restart the container
       restart: unless-stopped
