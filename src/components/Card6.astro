@@ -1,13 +1,30 @@
 <div class="card col-span-12 md:col-span-4 lg:col-span-1 md:row-span-2 h-44 lg:h-full center hover:cursor-alias hover:text-[#EF9B25C5]" id="projects">
 
-    <div>
-        <img data-src="/proyecta.webp" class="lazyload object-contain carousel" width="100%" height="100%" alt="Proyecta logo"/>
-        <img data-src="/kinnil.webp" class="lazyload object-contain carousel hidden" width="100%" height="100%" alt="Kinnil logo"/>
-        <img data-src="/jade.webp" class="lazyload object-contain carousel hidden" width="100%" height="100%" alt="JADE logo"/>
-        <img data-src="/ox.webp" class="lazyload object-contain carousel hidden" width="100%" height="100%" alt="OX logo"/>
-        <img data-src="/ignite.webp" class="lazyload object-contain carousel hidden" width="100%" height="100%" alt="Ignite logo"/>
-        <img data-src="/ezsort.webp" class="lazyload object-contain carousel hidden" width="100%" height="100%" alt="EZSort logo"/>
-        <img data-src="/inbayt.webp" class="lazyload object-contain carousel hidden" width="100%" height="100%" alt="InBayt logo"/>
+    <div class="relative w-full">
+        <div class="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-100 z-20 carousel">
+            <img data-src="/proyecta.webp" class="lazyload w-36" width="100%" height="100%" alt="Proyecta logo"/>
+        </div>
+        <div class="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-0 z-20 carousel">
+            <img data-src="/kinnil.webp" class="lazyload w-72" width="100%" height="100%" alt="Kinnil logo"/>
+        </div>
+        <div class="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-0 z-20 carousel">
+            <img data-src="/jade.webp" class="lazyload w-72" width="100%" height="100%" alt="JADE logo"/>
+        </div>
+        <div class="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-0 z-20 carousel">
+            <img data-src="/ox.webp" class="lazyload w-72" width="100%" height="100%" alt="OX logo"/>
+        </div>
+        <div class="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-0 z-20 carousel">
+            <img data-src="/ignite.webp" class="lazyload w-72" width="100%" height="100%" alt="Ignite logo"/>
+        </div>
+        <div class="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-0 z-20 carousel">
+            <img data-src="/ezsort.webp" class="lazyload w-72" width="100%" height="100%" alt="EZSort logo"/>
+        </div>
+        <div class="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-0 z-20 carousel">
+            <img data-src="/inbayt.webp" class="lazyload w-72" width="100%" height="100%" alt="InBayt logo"/>
+        </div>
+        <div class="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-0 z-20 carousel">
+            <img data-src="/mp-ck-pro.webp" class="lazyload w-40" width="100%" height="100%" alt="MP CheckOut Pro logo"/>
+        </div>
     </div>
     
 </div>
@@ -25,18 +42,19 @@
         'https://pidelectronics.com/ignite/',
         'https:///app.ezsort.tech/',
         'https://app.inbayt.com/',
+        'https://www.mercadopago.com.mx/developers/panel/developer-program/certification/cert_9e0cfd395c0f11ef97813ad702707ec3',
     ];
 
     let interval = setInterval(nextImg, seconds);
 
     function updatePosition() {
         for (let img of imgs) {
-            img.classList.remove('block');
-            img.classList.add('hidden');
+            img.classList.remove('opacity-100');
+            img.classList.add('opacity-0');
         }
 
-        imgs[imgPosition].classList.remove('hidden');
-        imgs[imgPosition].classList.add('block');
+        imgs[imgPosition].classList.remove('opacity-0');
+        imgs[imgPosition].classList.add('opacity-100');
     }
 
     function nextImg() {
