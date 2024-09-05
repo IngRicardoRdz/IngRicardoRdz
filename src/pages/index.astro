@@ -10,10 +10,12 @@ import Card5 from "../components/Card5.astro";
 import Card6 from "../components/Card6.astro";
 import Card7 from "../components/Card7.astro";
 import Card8 from "../components/Card8.astro";
+
+import LanguagePicker from '../components/LanguagePicker.astro';
 ---
 
-<Layout title="ManghiDev" language="es" htmlClasses="text-back dark:text-white bg-white dark:bg-[#13151a]">
-	<main class="h-screen md:center py-5 lg:py-0">
+<Layout title="ManghiDev" htmlClasses="text-back dark:text-white bg-white dark:bg-[#13151a]">
+	<main class="h-screen md:center py-0">
 		<Cards>
 			<Card1/>
 			<Card2/>
@@ -24,5 +26,6 @@ import Card8 from "../components/Card8.astro";
 			<Card7/>
 			<Card8/>
 		</Cards>
+		<LanguagePicker/>
 	</main>
 </Layout>

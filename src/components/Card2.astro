@@ -1,4 +1,6 @@
 ---
+import { getLangFromCookies, useTranslations } from '../i18n/utils';
+
 const getExperience = (start: Date, end: Date) => {
     const startDate = new Date(start);
     const endDate = new Date(end);
@@ -14,19 +16,26 @@ const getExperience = (start: Date, end: Date) => {
 };
 
 const myExperience = getExperience(new Date("2018-08-13"), new Date());
+
+const lang = getLangFromCookies(Astro.cookies);
+const t = useTranslations(lang, {
+    '{myExperience}': myExperience
+});
 ---
 
 <div class="card col-span-12 md:col-span-4 lg:col-span-1 md:row-span-10 lg:row-span-6 center">
     <div class="flex flex-col justify-around w-full h-full">
         <h1 class="text-xl text-center">
-            <strong class="myTextGradient">Algo sobre mi...</strong>
+            <strong class="myTextGradient">
+                { t('card2.title') }
+            </strong>
         </h1>
         
         <p class="text-xs">
-            Desarrollador full-stack con más de { myExperience } años de experiencia en desarrollo de aplicaciones/software a la medida.
+            { t('card2.paragraph1') }
         </p>
         <p class="text-xs">
-            Estas son algunas de las tecnologías que he utilizado en mis proyectos:
+            { t('card2.paragraph2') }
         </p>
         <ul class="text-xs list-disc pl-7">
             <li>Angular</li>
@@ -36,10 +45,11 @@ const myExperience = getExperience(new Date("2018-08-13"), new Date());
             <li>Express.js</li>
             <li>Docker</li>
             <li>MP CheckOut Pro</li>
-            <li>AWS, entre otras...</li>
+            <li>AWS</li>
+            <li>{ t('card2.paragraph3') }</li>
         </ul>
         <p class="text-xs">
-            Aunque tengo herramientas y tecnologicas que manejo más, me gusta aprender nuevas, para mejorar mis conocimientos y utilizar lo mejor para cada proyecto.
+            { t('card2.paragraph4') }
         </p>
     </div>
 </div>

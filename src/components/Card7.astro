@@ -3,39 +3,23 @@
 </div>
 
 <script>
-	import confetti from 'canvas-confetti'; 
+    import confetti from 'canvas-confetti';
+    import { getLangFromStorage, useTranslations } from '../i18n/utils';
 
-    const messages = [
-        '¡Usted es maravilloso!',
-        '¡Eres fabuloso!',
-        '¡Eres increíble!',
-        '🌲',
-        '¡Usted es fantástica!',
-        '¡Eres maravilloso!',
-        '¡Eres genial!',
-        '¡Eres el mejor!',
-        '🌳',
-        '¡Eres la mejor!',
-        '¡El mejor desarrollador!',
-        '¡El mejor diseñador!',
-        'La mejor persona',
-        '¡Felicidades!',
-        '🌱',
-        '¡Encontraste el huevo de Pascua!',
-        '¡Sigan con el buen trabajo!',
-        '¡Excelente trabajo!',
-        '🌴',
-        '¡Bien hecho!',
-    ];
+    const lang = getLangFromStorage(localStorage);
+    const t = useTranslations(lang);
+
+    const messages = t('card7.words').split(',');
 
     document.getElementById('randomMessage')!.innerHTML = '👾';
 
     let randomMessage = messages[Math.floor(Math.random() * messages.length)];
 
     const button = document.getElementById('easterEgg')!;
+    const random = messages[Math.floor(Math.random() * messages.length)];
 
     button.addEventListener('click', () => {
-        if (randomMessage === "¡Bien hecho!") {
+        if (randomMessage === random) {
             return document.getElementById('randomMessage')!.innerHTML = '🥭';
         }
 

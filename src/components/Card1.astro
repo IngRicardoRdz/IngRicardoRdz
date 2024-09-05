@@ -1,14 +1,21 @@
+---
+import { getLangFromCookies, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromCookies(Astro.cookies);
+const t = useTranslations(lang);
+---
+
 <div class="card col-span-12 lg:col-span-3 lg:row-span-4 group">
     <div class="flex w-full h-full">
         <div class="flex flex-col justify-between gap-4">
             <div class="flex flex-col h-full text-justify">
                 <div class="text-2xl">
                     <h1>
-                        Hola, soy
+                        { t('card1.greeting') }
                         <strong class="myTextGradient font-bold">Ricardo</strong>.
                     </h1>
                     <p class="my-2">
-                        Desarrollador full-stack con enfoque en back-end y entusiasta del front-end.
+                        { t('card1.description') }
                     </p>
                 </div>
             </div>

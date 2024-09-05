@@ -1,0 +1,34 @@
+---
+import { languages } from "../i18n/ui";
+import { getLangFromCookies } from '../i18n/utils';
+
+const lang = getLangFromCookies(Astro.cookies);
+---
+
+<div class=" fixed bottom-0 left-0 right-0 bg-black bg-opacity-30 text-white">
+    <ul id="menu" class="flex justify-around py-1">
+        <!-- localice in bottom -->
+    </ul>
+</div>
+
+<script define:vars={ { languages, lang } }>
+    Object.entries(languages).forEach(([key, value]) => {
+        const li = document.createElement("li");
+
+        li.id = key;
+
+        li.innerHTML = `<strong class="${ key === lang ? 'myTextGradient' : 'text-gray-200' }">${ value.name }</strong> <span>${ value.flag }</span>`;
+
+        li.classList.add("cursor-pointer");
+
+        li.addEventListener("click", () => changeLanguage(key));
+        
+        document.getElementById("menu").appendChild(li);
+    });
+
+    const changeLanguage = (lang) => {
+        //localStorage.setItem("lang", lang);
+        //document.cookie = `lang=${lang};`;
+        location.reload();
+    };
+</script>

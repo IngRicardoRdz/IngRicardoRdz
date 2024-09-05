@@ -1,15 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { getLangFromCookies, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromCookies(Astro.cookies);
+const t = useTranslations(lang);
 ---
 
-<Layout title="ManghiDev - 404 not found" language="es" htmlClasses="text-back dark:text-white bg-white dark:bg-[#13151a]" metaTags={ false }>
+
+<Layout title="ManghiDev - 404 not found" htmlClasses="text-back dark:text-white bg-white dark:bg-[#13151a]" metaTags={ false }>
 	<main class="h-screen center py-5 lg:py-0">
         <div class="container mx-auto">
             <div class="text-center">
                 <h1 class="text-7xl font-bold">404</h1>
-                <p class="text-xl">Página no encontrada</p>
+                <p class="text-xl">{ t('404.title') }</p>
                 <button class="bg-amber-700 px-4 py-2 mt-5 rounded-md" onclick="window.history.back()">
-                    Volver
+                    { t('404.button1') }
                 </button>
             </div>
         </div>

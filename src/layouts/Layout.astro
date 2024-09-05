@@ -4,23 +4,25 @@ import MetaTags from "../utilities/metaTags.astro";
 import Scripts from "../utilities/globalScripts.astro";
 import Styles from "../utilities/globalStyles.astro";
 
+import { getLangFromCookies } from '../i18n/utils';
+
+const lang = getLangFromCookies(Astro.cookies);
+
 interface Props {
 	title: string;
-	language: string;
 	htmlClasses: string;
 	metaTags?: boolean;
 }
 
 const {
 	title,
-	language,
 	htmlClasses,
 	metaTags = true,
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang={ language } class={ htmlClasses }>
+<html lang={ lang } class={ htmlClasses }>
 	<head>
 		<meta charset="UTF-8"/>
 

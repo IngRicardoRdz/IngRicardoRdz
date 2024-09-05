@@ -1,10 +1,17 @@
+---
+import { getLangFromCookies, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromCookies(Astro.cookies);
+const t = useTranslations(lang);
+---
+
 <div class="card col-span-12 md:col-span-4 lg:col-span-1 row-span-8 lg:row-span-4 text-wrap truncate">
     <div class="flex flex-col justify-around w-full h-full">
         <h1 class="text-xl text-center pb-4 mtTextGradientReverse">
-            <strong class="myTextGradient">¡Traba</strong><strong class="mtTextGradientReverse">jemos juntos!</strong>
+            <strong class="myTextGradient">{ t('card3.title1') }</strong><strong class="mtTextGradientReverse">{ t('card3.title2') }</strong>
         </h1>
         <p class="text-center md:text-justify">
-            Si tienes un proyecto, una idea que quieras llevar a cabo o simplemente quieres hablar, no dudes en contactarme.
+            { t('card3.paragraph1') }
         </p>
     </div>
 </div>
