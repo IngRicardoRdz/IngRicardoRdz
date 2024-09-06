@@ -9,7 +9,7 @@ export const languages = {
     },
 };
 
-export const defaultLang = 'es';
+export const defaultLang = 'en';
 
 export const ui = {
     es: {
@@ -31,7 +31,7 @@ export const ui = {
         '404.button1': 'Volver',
     },
     en: {
-        'card1.greeting': 'Hello, I\'m',
+        'card1.greeting': 'AHello, I\'m',
         'card1.description': 'Full-stack developer with a focus on back-end and front-end enthusiast',
         'card2.title': 'Something about me...',
         'card2.paragraph1': 'Full-stack developer with more than {myExperience} years of experience in custom application/software development.',
