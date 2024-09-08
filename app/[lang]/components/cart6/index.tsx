@@ -3,14 +3,14 @@
 import { useEffect } from 'react';
 import Image from "next/image";
 
-import proyecta from "../../../proyecta.webp";
-import kinnil from "../../../kinnil.webp";
-import jade from "../../../jade.webp";
-import ox from "../../../ox.webp";
-import ignite from "../../../ignite.webp";
-import ezsort from "../../../ezsort.webp";
-import inbayt from "../../../inbayt.webp";
-import mpckpro from "../../../mp-ck-pro.webp";
+import proyecta from "@/app/proyecta.webp";
+import kinnil from "@/app/kinnil.webp";
+import jade from "@/app/jade.webp";
+import ox from "@/app/ox.webp";
+import ignite from "@/app/ignite.webp";
+import ezsort from "@/app/ezsort.webp";
+import inbayt from "@/app/inbayt.webp";
+import mpckpro from "@/app/mp-ck-pro.webp";
 
 export default function Cart6Component() {
     useEffect(() => {

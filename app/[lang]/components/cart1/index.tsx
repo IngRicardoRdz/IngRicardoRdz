@@ -2,8 +2,8 @@ import Image from "next/image";
 
 import { I18N } from "@/app/i18n/i18n.utils";
 
-import memoji from "../../../manghidev-memoji.webp";
-import logo from "../../../manghidev-logo.webp";
+import memoji from "@/app/manghidev-memoji.webp";
+import logo from "@/app/manghidev-logo.webp";
 
 export default function Cart1Component(props: { t: I18N }) {
     const t = props.t;
