@@ -1,3 +1,16 @@
+export const SupportedLanguages = [
+    {
+        'name': 'Español',
+        'code': 'es-MX',
+        'flag': '🇲🇽',
+    },
+    {
+        'name': 'English',
+        'code': 'en-US',
+        'flag': '🇺🇸',
+    },
+];
+
 export interface I18N {
     "card1.greeting":    string;
     "card1.description": string;
@@ -16,16 +29,3 @@ export interface I18N {
     "404.title":         string;
     "404.button1":       string;
 }
-
-export const SupportedLanguages = [
-    {
-        'name': 'Español',
-        'code': 'es-MX',
-        'flag': '🇲🇽',
-    },
-    {
-        'name': 'English',
-        'code': 'en-US',
-        'flag': '🇺🇸',
-    },
-];
