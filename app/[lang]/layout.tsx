@@ -28,11 +28,11 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { lang: string };
 }>) {
-  return (
+  return <>
     <html lang={params.lang}>
       <body className={`select-none text-back dark:text-light bg-light dark:bg-dark ${JetBrainsMono.className} antialiased`} >
         {children}
       </body>
     </html>
-  );
+  </>;
 }

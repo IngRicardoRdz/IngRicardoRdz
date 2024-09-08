@@ -13,8 +13,6 @@ import LanguagePickerComponent from "./components/languagePicker";
 import { getDictionary } from "./dictionaries";
 
 export default async function HomePage({ params: { lang } }: { params: { lang: string } }) {
-  console.log('qwerty', lang);
-  
   const t = await getDictionary(lang);
 
   return (
