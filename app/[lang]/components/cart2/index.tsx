@@ -1,4 +1,4 @@
-import { I18N } from "@/app/i18n/i18n.interface";
+import { I18N } from "@/app/i18n/i18n.utils";
 
 const getExperience = (start: Date, end: Date) => {
     const startDate = new Date(start);

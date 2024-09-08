@@ -4,15 +4,15 @@
 
 @layer components {
     .myTextGradient {
-        @apply bg-clip-text bg-gradient-to-r from-[#EF9A25] from-35% via-[#E75D24] via-65% to-[#A92723] to-100% text-transparent;
+        @apply bg-clip-text bg-gradient-to-r from-mango1 from-35% via-mango4 via-65% to-mango2 to-100% text-transparent;
     }
 
     .mtTextGradientReverse {
-        @apply bg-clip-text bg-gradient-to-r from-[#A92723] from-35% via-[#E75D24] via-65% to-[#EF9A25] to-100% text-transparent;
+        @apply bg-clip-text bg-gradient-to-r from-mango2 from-35% via-mango4 via-65% to-mango1 to-100% text-transparent;
     }
 
     .card {
-        @apply transition-all border-2 border-gray-700 p-5 hover:border-[#EF9A25] rounded-xl duration-[400ms];
+        @apply transition-all border-2 border-gray-700 p-5 hover:border-mango1 rounded-xl duration-400;
     }
 
     .center {
@@ -20,6 +20,6 @@
     }
 
     .socialButton {
-        @apply text-xl transition-all hover:translate-x-[2px] hover:translate-y-[2px] duration-500 text-black dark:text-white px-5 py-2 border border-[#EF9A25] bg-white dark:bg-[#13151a] cursor-pointer rounded-xl hover:border-gray-600;
+        @apply text-xl transition-all hover:translate-x-1 hover:translate-y-1 duration-500 text-dark dark:text-light px-5 py-2 border border-mango1 bg-transparent cursor-pointer rounded-xl hover:border-gray-600;
     }
 }

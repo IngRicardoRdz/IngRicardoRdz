@@ -56,7 +56,7 @@ export default function Cart6Component() {
 
     return (
         <>
-            <div className="card col-span-12 md:col-span-4 lg:col-span-1 md:row-span-2 h-44 lg:h-full center hover:cursor-alias hover:text-[#EF9B25C5]" id="projects">
+            <div className="card col-span-12 md:col-span-4 lg:col-span-1 md:row-span-2 h-44 lg:h-full center hover:cursor-alias hover:text-mango3" id="projects">
                 <div className="relative w-full">
                     <div className="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-100 z-20 carousel">
                         <Image src={proyecta} className="w-36" alt="Proyecta logo" />
