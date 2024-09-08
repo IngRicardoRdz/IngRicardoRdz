@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-import { I18N } from '@/app/i18n/i18n.interface';
+import { I18N } from '@/app/i18n/i18n.utils';
 
 import confetti from 'canvas-confetti';
 
@@ -52,7 +52,7 @@ export default function Cart7Component(props: { t: I18N }) {
 
     return (
         <>
-            <div className="card text-center col-span-12 md:col-span-4 lg:col-span-1 lg:row-span-1 center hover:cursor-pointer hover:text-[#EF9B25C5]" id="easterEgg">
+            <div className="card text-center col-span-12 md:col-span-4 lg:col-span-1 lg:row-span-1 center hover:cursor-pointer hover:text-mango3" id="easterEgg">
                 <span id="randomMessage">
                     👾
                 </span>

@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
-let locales = ["es-MX", "en-US"];
+import { SupportedLanguages } from "@/app/i18n/i18n.utils";
+
+let locales = SupportedLanguages.map((lang) => lang.code);
 let defaultLocale = "en-US";
 
 //* Get the preferred locale, similar to the above or using a library

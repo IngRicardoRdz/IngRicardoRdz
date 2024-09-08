@@ -1,10 +1,10 @@
 import 'server-only';
 
-import { I18N } from "@/app/i18n/i18n.interface";
+import { SupportedLanguages, I18N } from "@/app/i18n/i18n.utils";
 
-const dictionaries: { [key: string]: () => Promise<I18N> } = {
-    'es-MX': () => import('../i18n/es-MX.json').then((module) => module.default),
-    'en-US': () => import('../i18n/en-US.json').then((module) => module.default),
-}
+const dynamicDictionaries = SupportedLanguages.reduce((acc, { code }) => {
+    acc[code] = () => import(`../i18n/${code}.json`).then(module => module.default);
+    return acc;
+}, {} as { [key: string]: () => Promise<I18N> });
 
-export const getDictionary = async (locale: string) => dictionaries[locale]();
+export const getDictionary = async (locale: string) => dynamicDictionaries[locale]();

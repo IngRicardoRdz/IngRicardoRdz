@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-import { I18N } from '@/app/i18n/i18n.interface';
+import { I18N } from '@/app/i18n/i18n.utils';
 
 export default function Cart4Component(props: { t: I18N }) {
     const t = props.t;
