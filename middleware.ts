@@ -6,7 +6,7 @@ let locales = SupportedLanguages.map((lang) => lang.code);
 let defaultLocale = locales[1];
 
 //* Get the preferred locale, similar to the above or using a library
-function getLocale(request: NextRequest) {
+const getLocale = (request: NextRequest) => {
     return defaultLocale;
 }
 
