@@ -1,0 +1,18 @@
+{
+    "card1.greeting": "Hello, I'm ",
+    "card1.description": "Full-stack developer with a focus on back-end and front-end enthusiast",
+    "card2.title": "Something about me...",
+    "card2.paragraph1": "Full-stack developer with more than {myExperience} years of experience in custom application/software development.",
+    "card2.paragraph2": "These are some of the technologies I have used in my projects:",
+    "card2.paragraph3": "Among others...",
+    "card2.paragraph4": "Although I have tools and technologies that I handle more, I like to learn new ones, to improve my knowledge and use the best for each project.",
+    "card3.title1": "Let\"s ",
+    "card3.title2": "work together!",
+    "card3.paragraph1": "If you have a project, an idea that you want to carry out or just want to talk, do not hesitate to contact me.",
+    "card4.title": "My local time",
+    "card5.title": "What am I doing now?",
+    "card5.paragraph1": "Learning Next.js",
+    "card7.words": "You are wonderful!,You are fabulous!,You are amazing!,🌲,You are fantastic!,You are wonderful!,You are great!,You are the best!,🌳,You are the best!,The best developer!,The best designer!,The best person,Congratulations!,🌱,You found the Easter egg!,Keep up the good work!,Excellent work!,🌴,Well done!",
+    "404.title": "Page not found!",
+    "404.button1": "Back"
+}

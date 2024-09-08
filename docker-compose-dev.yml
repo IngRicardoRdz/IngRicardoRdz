@@ -1,0 +1,21 @@
+#* All services to be used will be declared
+services:
+
+  #* Service name
+    frontend:
+      #* Image to use
+      image: node:20.17.0-alpine
+      init: true
+      #* Directory where you will work
+      working_dir: /home/dev
+      #* Container name
+      container_name: ManghiDevSite
+      command: sh -c "npm i && npm run dev"
+      #* Port exhibition
+      ports:
+        - 3000:3000
+      #* Volume where information persists
+      volumes:
+        - .:/home/dev
+      #* Restart the container
+      restart: unless-stopped
