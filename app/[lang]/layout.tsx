@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
 
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { JetBrains_Mono } from 'next/font/google';
 
 import { SupportedLanguages } from "@/app/i18n/i18n.utils";
+
+import SnowComponent from "./components/snow";
 
 const JetBrainsMono = JetBrains_Mono({
   weight: '800',
@@ -33,8 +35,10 @@ export default function RootLayout({
   return <>
     <html lang={params.lang}>
       <body className={`text-back dark:text-light bg-light dark:bg-dark ${JetBrainsMono.className} antialiased`} >
-        <SpeedInsights/>
-        
+        <SpeedInsights />
+
+        <SnowComponent months={[1, 11, 12]} particleNumberByMonthPosition={[50, 100, 250]} />
+
         {children}
       </body>
     </html>
