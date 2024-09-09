@@ -59,28 +59,28 @@ export default function Cart6Component() {
             <div className="card col-span-12 md:col-span-4 lg:col-span-1 md:row-span-2 h-44 lg:h-full center hover:cursor-alias hover:text-mango3" id="projects">
                 <div className="relative w-full">
                     <div className="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-100 z-20 carousel">
-                        <Image src={proyecta} className="w-36" alt="Proyecta logo" />
+                        <Image src={proyecta} className="w-36" loading="lazy" alt="Proyecta logo" />
                     </div>
                     <div className="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-0 z-20 carousel">
-                        <Image src={kinnil} className="w-72" alt="Kinnil logo" />
+                        <Image src={kinnil} className="w-72" loading="lazy" alt="Kinnil logo" />
                     </div>
                     <div className="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-0 z-20 carousel">
-                        <Image src={jade} className="w-72" alt="JADE logo" />
+                        <Image src={jade} className="w-72" loading="lazy" alt="JADE logo" />
                     </div>
                     <div className="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-0 z-20 carousel">
-                        <Image src={ox} className="w-72" alt="OX logo" />
+                        <Image src={ox} className="w-72" loading="lazy" alt="OX logo" />
                     </div>
                     <div className="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-0 z-20 carousel">
-                        <Image src={ignite} className="w-72" alt="Ignite logo" />
+                        <Image src={ignite} className="w-72" loading="lazy" alt="Ignite logo" />
                     </div>
                     <div className="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-0 z-20 carousel">
-                        <Image src={ezsort} className="w-72" alt="EZSort logo" />
+                        <Image src={ezsort} className="w-72" loading="lazy" alt="EZSort logo" />
                     </div>
                     <div className="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-0 z-20 carousel">
-                        <Image src={inbayt} className="w-72" alt="InBayt logo" />
+                        <Image src={inbayt} className="w-72" loading="lazy" alt="InBayt logo" />
                     </div>
                     <div className="absolute inset-0 w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-0 z-20 carousel">
-                        <Image src={mpckpro} className="w-40" alt="MP CheckOut Pro certification" />
+                        <Image src={mpckpro} className="w-40" loading="lazy" alt="MP CheckOut Pro certification" />
                     </div>
                 </div>
             </div>

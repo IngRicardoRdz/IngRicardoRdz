@@ -18,7 +18,7 @@ export default async function HomePage({ params: { lang } }: { params: { lang: s
   return (
     <>
       <main className="h-screen md:center py-0">
-        <div className="font-bold grid grid-cols-12 lg:grid-cols-[repeat(4,minmax(0,300px))] gap-4 lg:grid-rows-[repeat(8,minmax(0,60px))] p-5 lg:p-0">
+        <div className="select-none font-bold grid grid-cols-12 lg:grid-cols-[repeat(4,minmax(0,300px))] gap-4 lg:grid-rows-[repeat(8,minmax(0,60px))] p-5 lg:p-0">
             <Cart1Component t={ t }/>
             <Cart2Component t={ t }/>
             <Cart3Component t={ t }/>
