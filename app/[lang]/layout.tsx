@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
 
-import SnowComponent from "@/app/[lang]/components/snow";
+import SnowComponent from "./components/snow";
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
