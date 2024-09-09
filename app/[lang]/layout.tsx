@@ -6,7 +6,7 @@ import { JetBrains_Mono } from 'next/font/google';
 import { SupportedLanguages } from "@/app/i18n/i18n.utils";
 
 const JetBrainsMono = JetBrains_Mono({
-  weight: '400',
+  weight: '800',
   subsets: ['latin'],
 });
 

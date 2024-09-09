@@ -7,7 +7,9 @@ let defaultLocale = locales[1];
 
 //* Get the preferred locale, similar to the above or using a library
 const getLocale = (request: NextRequest) => {
-    return defaultLocale;
+    const acceptLanguage = request.headers.get("Accept-Language");
+    const preferredLocale = acceptLanguage?.split(",")[0] ?? defaultLocale;
+    return locales.includes(preferredLocale) ? preferredLocale : defaultLocale;
 }
 
 export function middleware(request: NextRequest) {
