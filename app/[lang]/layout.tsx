@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
 
-import SnowComponent from "./components/snow";
-
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { JetBrains_Mono } from 'next/font/google';
 
 import { SupportedLanguages } from "@/app/i18n/i18n.utils";
+
+import SnowComponent from "./components/snow";
 
 const JetBrainsMono = JetBrains_Mono({
   weight: '800',

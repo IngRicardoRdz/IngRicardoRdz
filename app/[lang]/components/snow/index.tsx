@@ -18,9 +18,10 @@ enum Months {
 }
 
 export default function SnowComponent(props: { months: Months[], particleNumberByMonthPosition: number[], snowClassBGColors?: string }) {
-    const { months, particleNumberByMonthPosition, snowClassBGColors = 'bg-gray-500 dark:bg-white' } = props;
 
     useEffect(() => {
+        const { months, particleNumberByMonthPosition, snowClassBGColors = 'bg-gray-500 dark:bg-white' } = props;
+
         Array.from(document.getElementsByTagName("img")).forEach((img) => {
             img.ondragstart = () => false;
         });
@@ -50,14 +51,14 @@ export default function SnowComponent(props: { months: Months[], particleNumberB
                 for (let i = 0; i < particleNumber; i++) {
                     embHTML += `<i class="embedding-snow ${snowClassBGColors}"></i>`;
 
-                    let rndX = parseFloat(
+                    const rndX = parseFloat(
                         (embRand(0, 1000000) * 0.0001).toFixed(2),
                     );
-                    let rndO = parseFloat(
+                    const rndO = parseFloat(
                         (embRand(-100000, 100000) * 0.0001).toFixed(2),
                     );
-                    let rndT = parseFloat((embRand(3, 8) * 10).toFixed(2));
-                    let rndS = parseFloat((embRand(0, 10000) * 0.0001).toFixed(2));
+                    const rndT = parseFloat((embRand(3, 8) * 10).toFixed(2));
+                    const rndS = parseFloat((embRand(0, 10000) * 0.0001).toFixed(2));
 
                     embCSS += `
                             .embedding-snow:nth-child(${i}) {
@@ -109,8 +110,7 @@ export default function SnowComponent(props: { months: Months[], particleNumberB
         if (months.includes(month)) {
             snowPage(month);
         }
-
-    }, []);
+    }, [props]);
 
     return <></>;
 }
