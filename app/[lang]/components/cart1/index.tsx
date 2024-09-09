@@ -47,10 +47,10 @@ export default function Cart1Component(props: { t: I18N }) {
                     </div>
                     <div className="relative w-1/2 hidden md:block">
                         <div className="absolute w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-100 group-hover:opacity-0 z-20">
-                            <Image src={memoji} className="object-contain" style={{ width: '100%', height: '100%', }} priority={true} alt={'memoji'} />
+                            <Image src={memoji} className="object-contain" style={{ width: '100%', height: '100%', }} loading="lazy" alt={'memoji'} />
                         </div>
                         <div className="relative w-full h-full flex justify-center items-center transition-opacity duration-700 opacity-0 group-hover:opacity-100 z-10">
-                            <Image src={logo} className="object-contain" style={{ width: '100%', height: '100%', }} alt={'logo'} />
+                            <Image src={logo} className="object-contain" style={{ width: '100%', height: '100%', }} loading="lazy" alt={'logo'} />
                         </div>
                     </div>
                 </div>

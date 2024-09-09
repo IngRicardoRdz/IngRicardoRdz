@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   authors: [{
     name: "ManghiDev",
   }],
-  description: "With manghidev you will be able to bring your ideas to reality, with a professional team that will help you create your mobile or web project, from the initial idea to the launch.",
+  description: "With manghidev you can make your ideas come true, with the professionalism that will help you create your mobile or web project, from the initial idea to its launch.",
   keywords: ['ManghiDev', 'manghidev', 'manghi', 'dev', 'development', 'web', 'mobile', 'app', 'android', 'ios', 'design', 'programming', 'professional', 'team', 'ideas', 'reality', 'project', 'idea', 'launch', 'startup', 'start-up'],
 };
 
@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return <>
     <html lang={params.lang}>
-      <body className={`select-none text-back dark:text-light bg-light dark:bg-dark ${JetBrainsMono.className} antialiased`} >
+      <body className={`text-back dark:text-light bg-light dark:bg-dark ${JetBrainsMono.className} antialiased`} >
         <SpeedInsights/>
         
         {children}
