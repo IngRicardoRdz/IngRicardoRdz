@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 import { JetBrains_Mono } from 'next/font/google';
 
 import { SupportedLanguages } from "@/app/i18n/i18n.utils";
@@ -31,6 +33,8 @@ export default function RootLayout({
   return <>
     <html lang={params.lang}>
       <body className={`select-none text-back dark:text-light bg-light dark:bg-dark ${JetBrainsMono.className} antialiased`} >
+        <SpeedInsights/>
+        
         {children}
       </body>
     </html>

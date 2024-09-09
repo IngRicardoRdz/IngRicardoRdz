@@ -20,6 +20,7 @@
     "typescript": "5"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^1.0.12",
     "canvas-confetti": "1.9.3",
     "next": "14.2.8",
     "react": "18",
