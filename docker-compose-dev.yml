@@ -13,7 +13,7 @@ services:
       command: sh -c "npm i && npm run dev"
       #* Port exhibition
       ports:
-        - 3000:3000
+        - 80:3000
       #* Volume where information persists
       volumes:
         - .:/home/dev
