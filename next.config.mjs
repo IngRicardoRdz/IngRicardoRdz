@@ -10,6 +10,14 @@ const nextConfig = {
     publicRuntimeConfig: {
         version: json.version,
     },
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'music-profile.rayriffy.com',
+            },
+        ],
+    },
 };
 
 export default nextConfig;
