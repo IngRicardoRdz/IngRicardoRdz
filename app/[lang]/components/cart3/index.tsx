@@ -1,5 +1,7 @@
 'use client'
 
+import Image from "next/image";
+
 import { I18N } from "@/app/i18n/i18n.utils";
 
 import { useState, useEffect } from 'react';
@@ -32,7 +34,7 @@ export default function Cart3Component(props: { t: I18N }) {
                     {
                         show === 2 && <>
                             <div className="flex justify-center">
-                                <img className="max-w-44" src="https://music-profile.rayriffy.com/theme/light.svg?uid=000102.207899e3f0ed47caa256a0f255dc22ba.1703" alt="AppleMusic" />
+                                <Image className="w-40" src={'https://music-profile.rayriffy.com/theme/light.svg?uid=000102.207899e3f0ed47caa256a0f255dc22ba.1703'} priority={false} height={0} width={0} alt="AppleMusic" />
                             </div>
                         </>
                     }
