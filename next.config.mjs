@@ -6,11 +6,13 @@ const require = createRequire(import.meta.url);
 const json = require("./package.json");
 
 const nextConfig = {
+    output: 'standalone',
     reactStrictMode: true,
     publicRuntimeConfig: {
         version: json.version,
     },
     images: {
+        dangerouslyAllowSVG: true,
         remotePatterns: [
             {
                 protocol: 'https',
