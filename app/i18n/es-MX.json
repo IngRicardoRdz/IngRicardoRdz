@@ -1,6 +1,6 @@
 {
     "card1.greeting": "Hola, soy ",
-    "card1.description": "Desarrollador full-stack con enfoque en back-end y entusiasta del front-end.",
+    "card1.description": "Desarrollador full-stack con experiencia en el desarrollo de aplicaciones web y móviles multiplataforma.",
     "card2.title": "Algo sobre mi...",
     "card2.paragraph1": "Desarrollador full-stack con más de {myExperience} años de experiencia en desarrollo de aplicaciones/software a la medida.",
     "card2.paragraph2": "Estas son algunas de las tecnologías que he utilizado en mis proyectos:",
@@ -11,7 +11,7 @@
     "card3.paragraph1": "Si tienes un proyecto, una idea que quieras llevar a cabo o simplemente quieres hablar, no dudes en contactarme.",
     "card4.title": "Mi hora local",
     "card5.title": "¿En que estoy ahora?",
-    "card5.paragraph1": "Aprendiendo Next.js",
+    "card5.paragraph1": "Desarrollando el software Rarínea",
     "card7.words": "¡Usted es maravilloso!,¡Eres fabuloso!,¡Eres increíble!,🌲,¡Usted es fantástica!,¡Eres maravilloso!,¡Eres genial!,¡Eres el mejor!,🌳,¡Eres la mejor!,¡El mejor desarrollador!,¡El mejor diseñador!,La mejor persona,¡Felicidades!,🌱,¡Encontraste el huevo de Pascua!,¡Sigan con el buen trabajo!,¡Excelente trabajo!,🌴,¡Bien hecho!",
     "404.title": "¡Página no encontrada!",
     "404.button1": "Volver"
