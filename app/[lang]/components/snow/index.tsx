@@ -29,6 +29,8 @@ export default function SnowComponent(props: {
     useEffect(() => {
         const { months, particleNumberByMonthPosition, snowClassBGColors = 'bg-gray-500 dark:bg-white', idChristmasHat = 'root' } = props;
 
+        const month = new Date().getMonth() + 1;
+
         Array.from(document.getElementsByTagName("img")).forEach((img) => {
             img.ondragstart = () => false;
         });
@@ -38,7 +40,7 @@ export default function SnowComponent(props: {
 
             const personalInfo = document.getElementById(idChristmasHat);
 
-            if (personalInfo) {
+            if (personalInfo && month === Months.December) {
                 personalInfo.classList.add("relative");
                 personalInfo.innerHTML += `
                     <div class="absolute -top-9 md:-top-14 lg:-top-[4.5rem] -left-6 md:-left-8 lg:-left-12 z-30 -rotate-12">
@@ -122,8 +124,6 @@ export default function SnowComponent(props: {
                 document.body.appendChild(embeddingSnow);
             }
         };
-
-        const month = new Date().getMonth() + 1;
 
         if (months.includes(month)) {
             snowPage(month);
