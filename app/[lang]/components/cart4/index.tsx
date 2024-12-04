@@ -29,7 +29,7 @@ export default function Cart4Component(props: { t: I18N }) {
 
     return (
         <>
-            <div className="card col-span-12 md:col-span-4 lg:col-span-2 row-span-4 lg:row-span-2">
+            <div id="currentTime" className="card col-span-12 md:col-span-4 lg:col-span-2 row-span-4 lg:row-span-2">
                 <div className="flex flex-col justify-between w-full h-full">
                     <h1 className="text-2xl">
                         <strong className="mtTextGradientReverse">{t['card4.title']}</strong>

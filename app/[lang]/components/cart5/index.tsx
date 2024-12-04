@@ -5,7 +5,7 @@ export default function Cart5Component(props: { t: I18N }) {
 
     return (
         <>
-            <div className="card col-span-12 md:col-span-4 lg:col-span-1 lg:col-start-2 md:row-span-4 lg:row-span-2 center">
+            <div id="currentHobby" className="card col-span-12 md:col-span-4 lg:col-span-1 lg:col-start-2 md:row-span-4 lg:row-span-2 center">
                 <div className="flex justify-between text-justify w-full h-full">
                     <div className="flex flex-col justify-between">
                         <h1 className="text-xl myTextGradient">

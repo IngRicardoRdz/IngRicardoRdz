@@ -52,7 +52,7 @@ export default function Cart7Component(props: { t: I18N }) {
 
     return (
         <>
-            <div className="card text-center col-span-12 md:col-span-4 lg:col-span-1 lg:row-span-1 center hover:cursor-pointer hover:text-mango3" id="easterEgg">
+            <div id="easterEgg" className="card text-center col-span-12 md:col-span-4 lg:col-span-1 lg:row-span-1 center hover:cursor-pointer hover:text-mango3">
                 <span id="randomMessage">
                     👾
                 </span>
