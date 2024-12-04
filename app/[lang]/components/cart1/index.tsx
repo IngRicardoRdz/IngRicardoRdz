@@ -10,7 +10,7 @@ export default function Cart1Component(props: { t: I18N }) {
 
     return (
         <>
-            <div id="personalInfo" className="card col-span-12 lg:col-span-3 lg:row-span-4 group">
+            <div id="personalDescription" className="card col-span-12 lg:col-span-3 lg:row-span-4 group">
                 <div className="flex w-full h-full">
                     <div className="flex flex-col justify-between gap-4">
                         <div className="flex flex-col h-full text-justify">

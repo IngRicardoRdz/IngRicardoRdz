@@ -38,12 +38,12 @@ export default function SnowComponent(props: {
         const snowPage = (month: number) => {
             let embeddingSnow = document.getElementById('embedding--snow');
 
-            const personalInfo = document.getElementById(idChristmasHat);
+            const elementHat = document.getElementById(idChristmasHat);
 
-            if (personalInfo && month === Months.December) {
-                personalInfo.classList.add("relative");
-                personalInfo.innerHTML += `
-                    <div class="absolute -top-9 md:-top-14 lg:-top-[4.5rem] -left-6 md:-left-8 lg:-left-12 z-30 -rotate-12">
+            if (elementHat && month === Months.December) {
+                elementHat.classList.add("relative");
+                elementHat.innerHTML += `
+                    <div class="absolute -top-8 md:-top-14 lg:-top-[4.5rem] -left-6 md:-left-8 lg:-left-12 z-30 -rotate-12">
                         <Image srcset="${christmasHat.src}" src="${christmasHat.src}" decoding="async" data-nimg="1" class="w-16 md:w-24 lg:w-32" loading="lazy" alt="christmasHat" />
                     </div>
                 `;
@@ -125,9 +125,7 @@ export default function SnowComponent(props: {
             }
         };
 
-        if (months.includes(month)) {
-            snowPage(month);
-        }
+        if (months.includes(month)) snowPage(month);
     }, [props]);
 
     return <></>;
