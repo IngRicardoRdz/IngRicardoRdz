@@ -40,7 +40,7 @@ export default function RootLayout({
       <body className={`text-back dark:text-light bg-light dark:bg-dark ${JetBrainsMono.className} antialiased`} >
         <SpeedInsights />
 
-        <SnowComponent months={[1, 11, 12]} particleNumberByMonthPosition={[50, 100, 250]} />
+        <SnowComponent months={[1, 11, 12]} particleNumberByMonthPosition={[50, 100, 450]} idChristmasHat="personalDescription" />
 
         {children}
       </body>

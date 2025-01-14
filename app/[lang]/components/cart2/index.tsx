@@ -19,7 +19,7 @@ export default function Cart2Component(props: { t: I18N }) {
 
     return (
         <>
-            <div className="card col-span-12 md:col-span-4 lg:col-span-1 md:row-span-10 lg:row-span-6 center">
+            <div id="technologies" className="card col-span-12 md:col-span-4 lg:col-span-1 md:row-span-10 lg:row-span-6 center">
                 <div className="flex flex-col justify-around w-full h-full">
                     <h1 className="text-xl text-center">
                         <strong className="myTextGradient">

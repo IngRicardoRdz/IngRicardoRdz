@@ -17,17 +17,37 @@ enum Months {
     December = 12
 }
 
-export default function SnowComponent(props: { months: Months[], particleNumberByMonthPosition: number[], snowClassBGColors?: string }) {
+import christmasHat from "@/app/christmasHat.webp";
+
+export default function SnowComponent(props: {
+    months: Months[],
+    particleNumberByMonthPosition: number[],
+    snowClassBGColors?: string,
+    idChristmasHat?: string,
+}) {
 
     useEffect(() => {
-        const { months, particleNumberByMonthPosition, snowClassBGColors = 'bg-gray-500 dark:bg-white' } = props;
+        const { months, particleNumberByMonthPosition, snowClassBGColors = 'bg-gray-500 dark:bg-white', idChristmasHat = 'root' } = props;
+
+        const month = new Date().getMonth() + 1;
 
         Array.from(document.getElementsByTagName("img")).forEach((img) => {
             img.ondragstart = () => false;
         });
 
         const snowPage = (month: number) => {
-            let embeddingSnow = document.getElementById("embedding--snow");
+            let embeddingSnow = document.getElementById('embedding--snow');
+
+            const elementHat = document.getElementById(idChristmasHat);
+
+            if (elementHat && month === Months.December) {
+                elementHat.classList.add("relative");
+                elementHat.innerHTML += `
+                    <div class="absolute -top-8 md:-top-14 lg:-top-[4.5rem] -left-6 md:-left-8 lg:-left-12 z-30 -rotate-12">
+                        <Image srcset="${christmasHat.src}" src="${christmasHat.src}" decoding="async" data-nimg="1" class="w-16 md:w-24 lg:w-32" loading="lazy" alt="christmasHat" />
+                    </div>
+                `;
+            }
 
             if (!embeddingSnow) {
                 const embRand = (a: number, b: number) => {
@@ -105,11 +125,7 @@ export default function SnowComponent(props: { months: Months[], particleNumberB
             }
         };
 
-        const month = new Date().getMonth() + 1;
-
-        if (months.includes(month)) {
-            snowPage(month);
-        }
+        if (months.includes(month)) snowPage(month);
     }, [props]);
 
     return <></>;

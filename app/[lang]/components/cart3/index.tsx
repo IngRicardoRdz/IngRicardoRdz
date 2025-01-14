@@ -19,7 +19,7 @@ export default function Cart3Component(props: { t: I18N }) {
 
     return (
         <>
-            <div className="card col-span-12 md:col-span-4 lg:col-span-1 row-span-8 lg:row-span-4 text-wrap truncate">
+            <div id="letsWork" className="card col-span-12 md:col-span-4 lg:col-span-1 row-span-8 lg:row-span-4 text-wrap truncate">
                 <div className="flex flex-col justify-around w-full h-full">
                     {
                         show === 1 && <>
