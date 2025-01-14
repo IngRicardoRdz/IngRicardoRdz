@@ -34,6 +34,9 @@ export default function RootLayout({
 }>) {
   return <>
     <html lang={params.lang}>
+      <head>
+        <meta name="google-adsense-account" content="ca-pub-4108962150005369" />
+      </head>
       <body className={`text-back dark:text-light bg-light dark:bg-dark ${JetBrainsMono.className} antialiased`} >
         <SpeedInsights />
 
